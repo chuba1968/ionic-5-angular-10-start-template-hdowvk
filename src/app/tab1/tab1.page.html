@@ -13,14 +13,18 @@
 </ion-header>
 
 <ion-content>
-  
-  <ion-searchbar></ion-searchbar>
+  <ion-card>
+    <img
+      src="https://media.istockphoto.com/photos/judge-gavel-and-scale-in-court-legal-concept-picture-id1090431444?k=20&m=1090431444&s=612x612&w=0&h=by_YZG3Mc-wnqx9bSpsKYMKOJkzRDW-WPDfGq8M_Y-o="
+    />
+  </ion-card>
+  <ion-searchbar ></ion-searchbar>
   <ion-grid class="ion-no-padding">
     <ion-row>
       <ion-col size="12">
         <ion-slides [options]="categories">
           <ion-slide>
-            <ion-card class="category" color="success">
+            <ion-card class="category" color="success" [routerLink]="['/tab2']" class="routes">
               <ion-card-header class="ion-text-center">
                 <ion-icon name="cart-sharp"></ion-icon>
                 <ion-card-title>Buy Properties</ion-card-title>
@@ -91,49 +95,33 @@
     </ion-row>
   </ion-grid>
 
-  <ion-grid fixed>
+  <ion-grid>
     <ion-row>
-      <ion-col size="6">
-        <ion-card>
-          <ion-card-content>
-            <div class="title">
-              <ion-icon name="book-outline" class="fl"></ion-icon>
-              <p>Managing Partners office</p>
-            </div>
-          </ion-card-content>
-        </ion-card>
+      <ion-col>
+        <div [routerLink]="['/profile']" class="routes">
+          <img src="/assets/images/iconmonstr-id-card-15-240 (2).png" />
+        </div>
+
+        <p
+          class="underslide"
+          style="text-align: center"
+          [routerLink]="['/profile']"
+          class="routes"
+        >
+          Profile
+        </p>
       </ion-col>
-      <ion-col size="6">
-        <ion-card color="medium">
-          <ion-card-content>
-            <div class="title">
-              <ion-icon name="mail-outline" class="fl"></ion-icon>
-              <p>Managing Partners office</p>
-            </div>
-          </ion-card-content>
-        </ion-card>
+      <ion-col>
+        <div [routerLink]="['/partners']" class="routes">
+          <img src="/assets/images/iconmonstr-user-29-240 (1).png" />
+        </div>
       </ion-col>
-      <ion-col size="6">
-        <ion-card color="medium">
-          <ion-card-content>
-            <div class="title">
-              <ion-icon name="bar-chart-outline" class="fl"></ion-icon>
-              <p>Managing Partners office</p>
-            </div>
-          </ion-card-content>
-        </ion-card>
+      <ion-col>
+        <div [routerLink]="['/practiceareas']" class="routes">
+          <p>Homework to do</p>
+          <img src="/assets/images/iconmonstr-clipboard-6-240.png" />
+        </div>
       </ion-col>
-      <ion-col size="6">
-        <ion-card color="medium">
-          <ion-card-content>
-            <div class="title">
-              <ion-icon name="reader-outline" class="fl"></ion-icon>
-              <p>Managing Partners office</p>
-            </div>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col size="12"> </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
